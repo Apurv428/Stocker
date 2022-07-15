@@ -28,7 +28,7 @@ mongoose.connection.on("disconnected", () => {
     console.log("mongoDB disconnected!")
 })
 
-app.use(cors({ origin: ["http://localhost:3000", ""], methods: ["GET", "POST", "PATCH"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:3000", "https://stocker-nine.vercel.app"], methods: ["GET", "POST", "PATCH"], credentials: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser("secretcode"));
